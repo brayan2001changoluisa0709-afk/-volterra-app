@@ -10,6 +10,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Volterra">
 <meta name="description" content="Plataforma corporativa de gestión eléctrica: mercado, red SCADA, facturación, órdenes, equipo y campo.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.6 1.6L5.2 13.1h5.1L9.1 22.4l8.7-11.9h-5.3z' fill='%23E4C27C'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" id="appleIcon" href="data:image/png;base64,iVBORw0KGgo=">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5.0.19/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5.0.19/index.css">
@@ -533,7 +534,7 @@ html[data-theme="aurora"] .toast{background:rgba(255,255,255,.97);border-color:r
             <button class="btn danger" data-act="reset-db">Restablecer demo</button></div></div>
         </div>
         <div class="card" style="text-align:center"><p class="eyebrow">Grupo Volterra Energía</p>
-          <p class="muted" style="font-size:10.5px;margin-top:8px;letter-spacing:1px;line-height:1.8">VERSIÓN 9.0 · PWA · iPad / iPhone / Android / PC<br>© 2026 Grupo Volterra</p></div>
+          <p class="muted" style="font-size:10.5px;margin-top:8px;letter-spacing:1px;line-height:1.8">VERSIÓN 9.1 · PWA · iPad / iPhone / Android / PC<br>© 2026 Grupo Volterra</p></div>
       </section>
       <section class="view" id="v-menu">
         <div class="vhead"><div><h1>Módulos</h1><p>Todas las áreas de la plataforma</p></div></div>
@@ -627,6 +628,7 @@ html[data-theme="aurora"] .toast{background:rgba(255,255,255,.97);border-color:r
 
 <script>
 window.addEventListener('error',function(e){
+  if(!e.message||String(e.message).indexOf('Script error')===0)return;
   var b=document.getElementById('errbar');
   if(b){b.textContent='Error: '+(e.message||'desconocido')+' (línea '+(e.lineno||'?')+')';b.style.display='block';
     setTimeout(function(){b.style.display='none'},9000)}
@@ -846,7 +848,6 @@ function badgeFor(v){
 }
 function refreshBadges(){
   $$('[data-pill]').forEach(function(p){var b=badgeFor(p.dataset.pill);p.textContent=b||'';p.style.display=b?'':'none'});
-  var to=$('#tabOt');if(to)to.textContent=DB.orders.filter(function(o){return o.status!=='finalizada'}).length;
   var td=$('#topMsgDot');if(td)td.style.display=unreadAdmin()?'':'none';
   var wp=$('#wMsgPill');if(wp){var uw=unreadWorker();wp.textContent=uw||'';wp.style.display=uw?'':'none'}
   var wd=$('#wMsgDot');if(wd)wd.style.display=unreadWorker()?'':'none';
@@ -1130,8 +1131,7 @@ function openInvoice(id){
     '<button class="btn gold" data-pdf="'+i.id+'">'+svg('down')+'Descargar PDF</button>'+
     '<button class="btn ghost" data-mailinv="'+i.id+'">'+svg('mail')+'Enviar</button></div>'+
     '<div class="btn-row" style="margin-top:9px">'+
-    (i.status!=='pagada'?'<button class="btn ghost" data-pay="'+i.id+'">'+svg('check')+'Marcar cobrada</button>':'')+
-    '<button class="btn ghost" data-editinv="'+i.id+'">'+svg('note')+'Editar</button></div>');
+    (i.status!=='pagada'?'<button class="btn ghost" data-pay="'+i.id+'">'+svg('check')+'Marcar cobrada</button>':'')+'</div>');
 }
 function newInvoiceForm(preCli){
   var num=DB.settings.prefInv+String(DB.seq.inv).padStart(4,'0');
@@ -1253,7 +1253,7 @@ function invoicePdf(inv){
   p.r(40,150,515,52,'0.95 0.96 0.94');
   p.t(56,182,'Energia 100% renovable con Garantias de Origen CNMC.','/F1',9,'0.15 0.3 0.25');
   p.t(56,166,'Factura electronica con sello de tiempo · '+co.name,'/F1',8,'0.35 0.4 0.45');
-  p.t(40,128,'Volterra Gestion v9 · '+new Date().toLocaleString('es-ES'),'/F1',7.5,'0.55 0.6 0.68');
+  p.t(40,128,'Volterra Gestion v9.1 · '+new Date().toLocaleString('es-ES'),'/F1',7.5,'0.55 0.6 0.68');
   return new Blob([buildPdf([p.o])],{type:'application/pdf'});
 }
 function reportPdf(mode){
@@ -1294,7 +1294,7 @@ function reportPdf(mode){
   rows.forEach(function(r,i){
     if(i%2===0)p.r(40,y-5,515,17,'0.965 0.965 0.975');
     p.t(50,y,r[0],'/F1',9.5,'0.16 0.18 0.24');p.t(440,y,r[1],'/F2',9.5,'0.1 0.12 0.18');y-=18});
-  p.t(40,80,'Informe generado por Vera IA · Volterra Gestion v9','/F1',7.5,'0.55 0.6 0.68');
+  p.t(40,80,'Informe generado por Vera IA · Volterra Gestion v9.1','/F1',7.5,'0.55 0.6 0.68');
   return new Blob([buildPdf([p.o])],{type:'application/pdf'});
 }
 var statusChip=function(s){return{pendiente:'red',asignada:'amber',encurso:'cyan',finalizada:'green'}[s]||''};
@@ -2350,7 +2350,7 @@ function renderWProfile(){
     '<p class="eyebrow">Sesión</p>'+
     '<p class="muted" style="font-size:11.5px;margin-top:8px">Vuelve al inicio de sesión para entrar como Administrador u otro Trabajador.</p>'+
     '<button class="btn gold full xl" style="margin-top:12px" id="wLogoutBig">'+svg('out')+'Cambiar de usuario</button>'+
-    '<p class="muted" style="font-size:10px;margin-top:11px;letter-spacing:1px">VOLTERRA v9 · MODO TRABAJADOR</p></div>';
+    '<p class="muted" style="font-size:10px;margin-top:11px;letter-spacing:1px">VOLTERRA v9.1 · MODO TRABAJADOR</p></div>';
   $('#npSave').onclick=function(){
     var a=$('#np1').value,b=$('#np2').value;
     if(!a){toast('Escribe la nueva contraseña','alert');return}
@@ -2476,7 +2476,7 @@ function enterApp(){
 document.addEventListener('click',function(e){
   var t=e.target.closest('[data-nav],[data-wnav],[data-worder],[data-wstart],[data-wnote],[data-wfinish],[data-maps],' +
     '[data-act],[data-order],[data-client],[data-inv],[data-stock],[data-msgopen],[data-techdet],[data-creds],[data-msgtech],' +
-    '[data-newinvfor],[data-newotfor],[data-adv],[data-assign],[data-delorder],[data-pay],[data-pdf],[data-mailinv],[data-editinv],[data-editclient],[data-callto],' +
+    '[data-newinvfor],[data-newotfor],[data-adv],[data-assign],[data-delorder],[data-pay],[data-pdf],[data-mailinv],[data-editclient],[data-callto],' +
     '[data-vchip],[data-vact],[data-vpdf],[data-vcobrar],[data-vrep],[data-vnewinv],[data-vasignar],[data-echip]');
   if(!t)return;
   var d=t.dataset;vib(7);
