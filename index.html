@@ -1,9 +1,24 @@
-<!DOCTYPE html>
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <style>
+                body {
+                  background-color: white; /* Ensure the iframe has a white background */
+                }
+
+                
+              </style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
 <html lang="es" data-theme="obsidian">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<title>Volterra Energía · Edición Prestige</title>
+<title>Volterra Energía · Edición Prestige v11</title>
 <meta name="theme-color" content="#05070E">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -12,9 +27,36 @@
 <meta name="description" content="Plataforma corporativa de gestión eléctrica: mercado, red SCADA, facturación, órdenes, equipo y campo.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.6 1.6L5.2 13.1h5.1L9.1 22.4l8.7-11.9h-5.3z' fill='%23E4C27C'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" id="appleIcon" href="data:image/png;base64,iVBORw0KGgo=">
+<style>
+html{background:#05070E}
+html[data-theme="aurora"]{background:#F3EEE4}
+#splash{position:fixed;inset:0;z-index:500;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(180deg,#05070E,#0A0F1C);transition:opacity .45s ease,visibility .45s}
+html[data-theme="aurora"] #splash{background:linear-gradient(180deg,#F7F4ED,#EDE9E0)}
+#splash.hide{opacity:0;visibility:hidden;pointer-events:none}
+#splash .slogo{width:84px;height:84px;border-radius:26px;display:grid;place-items:center;background:linear-gradient(150deg,#151C2E,#05080F);border:1px solid rgba(201,162,39,.5);box-shadow:0 0 60px -10px rgba(201,162,39,.75);position:relative}
+html[data-theme="aurora"] #splash .slogo{background:linear-gradient(150deg,#FFFFFF,#E8E2D6)}
+#splash .slogo::after{content:"";position:absolute;inset:-8px;border-radius:32px;border:1px solid rgba(201,162,39,.45);animation:spl 2.2s ease-out infinite;pointer-events:none}
+@keyframes spl{0%{transform:scale(.92);opacity:.9}100%{transform:scale(1.16);opacity:0}}
+#splash .slogo svg{width:40px;height:40px}
+#splash h1{font-family:Georgia,'Playfair Display',serif;font-size:26px;letter-spacing:8px;margin-top:20px;color:#E4C27C}
+html[data-theme="aurora"] #splash h1{color:#8C6A21}
+#splash p{font-size:10px;letter-spacing:3px;color:#8A93A9;margin-top:10px;text-transform:uppercase}
+#splash .sbar{width:170px;height:2px;border-radius:99px;background:rgba(255,255,255,.12);margin-top:26px;overflow:hidden}
+html[data-theme="aurora"] #splash .sbar{background:rgba(20,24,40,.12)}
+#splash .sbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#FBF0D2,#C9A227);animation:sload 1.4s cubic-bezier(.22,.68,.24,1) forwards}
+@keyframes sload{to{width:100%}}
+</style>
+<script>
+try{var _d=JSON.parse(localStorage.getItem('volterra-v10'));if(_d&&_d.settings&&_d.settings.theme==='aurora'){document.documentElement.setAttribute('data-theme','aurora');document.querySelector('meta[name="theme-color"]').setAttribute('content','#F3EEE4');}}catch(e){}
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5.0.19/index.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5.0.19/index.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5.0.19/index.css" media="print" onload="this.media='all'">
+<noscript>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5.0.19/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5.0.19/index.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5.0.19/index.css">
+</noscript>
 <style>
 :root{--bg:#04060D;--bg2:#080D18;--bg3:#0C1220;--surface:rgba(255,255,255,.045);--surface2:rgba(255,255,255,.075);
 --surface3:rgba(255,255,255,.12);--stroke:rgba(255,255,255,.09);--stroke2:rgba(255,255,255,.17);--txt:#F2F5FB;
@@ -377,6 +419,8 @@ html[data-theme="aurora"] .toast{background:rgba(255,255,255,.97);border-color:r
 </style>
 </head>
 <body>
+<div id="splash"><div class="slogo"><svg viewBox="0 0 24 24"><path d="M13.6 1.6L5.2 13.1h5.1L9.1 22.4l8.7-11.9h-5.3z" fill="#E4C27C"/></svg></div><h1>VOLTERRA</h1><p>Cargando plataforma…</p><div class="sbar"><i></i></div></div>
+<script>setTimeout(function(){var s=document.getElementById('splash');if(s){s.classList.add('hide');setTimeout(function(){if(s&&s.parentNode)s.parentNode.removeChild(s)},600)}},7000);</script>
 <div id="errbar"></div>
 
 <div class="auth" id="auth">
@@ -569,7 +613,7 @@ html[data-theme="aurora"] .toast{background:rgba(255,255,255,.97);border-color:r
             <button class="btn danger" data-act="reset-db">Restablecer demo</button></div></div>
         </div>
         <div class="card" style="text-align:center"><p class="eyebrow">Grupo Volterra Energía</p>
-          <p class="muted" style="font-size:10.5px;margin-top:8px;letter-spacing:1px;line-height:1.8">VERSIÓN 10.1 · EDICIÓN PRESTIGE · PWA<br>iPad / iPhone / Android / PC<br>© 2026 Grupo Volterra</p></div>
+          <p class="muted" style="font-size:10.5px;margin-top:8px;letter-spacing:1px;line-height:1.8">VERSIÓN 11.0 · EDICIÓN PRESTIGE · PWA<br>iPad / iPhone / Android / PC<br>© 2026 Grupo Volterra</p></div>
       </section>
       <section class="view" id="v-menu">
         <div class="vhead"><div><h1>Módulos</h1><p>Todas las áreas de la plataforma</p></div></div>
@@ -668,6 +712,12 @@ window.addEventListener('error',function(e){
   if(b){b.textContent='Error: '+(e.message||'desconocido')+' (línea '+(e.lineno||'?')+')';b.style.display='block';
     setTimeout(function(){b.style.display='none'},9000)}
 });
+function hideSplash(){
+  var s=document.getElementById('splash');
+  if(!s)return;
+  s.classList.add('hide');
+  setTimeout(function(){if(s&&s.parentNode)s.parentNode.removeChild(s)},650);
+}
 var $=function(s,c){return (c||document).querySelector(s)};
 var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
 var nf=function(n,d){return new Intl.NumberFormat('es-ES',{minimumFractionDigits:d==null?2:d,maximumFractionDigits:d==null?2:d}).format(Number(n)||0)};
@@ -1288,7 +1338,7 @@ function invoicePdf(inv){
   p.r(40,150,515,52,'0.95 0.96 0.94');
   p.t(56,182,'Energia 100% renovable con Garantias de Origen CNMC.','/F1',9,'0.15 0.3 0.25');
   p.t(56,166,'Factura electronica con sello de tiempo · '+co.name,'/F1',8,'0.35 0.4 0.45');
-  p.t(40,128,'Volterra Gestion v10.1 · '+new Date().toLocaleString('es-ES'),'/F1',7.5,'0.55 0.6 0.68');
+  p.t(40,128,'Volterra Gestion v11 · '+new Date().toLocaleString('es-ES'),'/F1',7.5,'0.55 0.6 0.68');
   return new Blob([buildPdf([p.o])],{type:'application/pdf'});
 }
 function reportPdf(mode){
@@ -1329,7 +1379,7 @@ function reportPdf(mode){
   rows.forEach(function(r,i){
     if(i%2===0)p.r(40,y-5,515,17,'0.965 0.965 0.975');
     p.t(50,y,r[0],'/F1',9.5,'0.16 0.18 0.24');p.t(440,y,r[1],'/F2',9.5,'0.1 0.12 0.18');y-=18});
-  p.t(40,80,'Informe generado por Vera IA · Volterra Gestion v10.1','/F1',7.5,'0.55 0.6 0.68');
+  p.t(40,80,'Informe generado por Vera IA · Volterra Gestion v11','/F1',7.5,'0.55 0.6 0.68');
   return new Blob([buildPdf([p.o])],{type:'application/pdf'});
 }
 var statusChip=function(s){return{pendiente:'red',asignada:'amber',encurso:'cyan',finalizada:'green'}[s]||''};
@@ -2389,7 +2439,7 @@ function renderWProfile(){
     '<p class="eyebrow">Sesión</p>'+
     '<p class="muted" style="font-size:11.5px;margin-top:8px">Vuelve al inicio de sesión para entrar como Administrador u otro Trabajador.</p>'+
     '<button class="btn gold full xl" style="margin-top:12px" id="wLogoutBig">'+svg('out')+'Cambiar de usuario</button>'+
-    '<p class="muted" style="font-size:10px;margin-top:11px;letter-spacing:1px">VOLTERRA v10.1 · MODO TRABAJADOR</p></div>';
+    '<p class="muted" style="font-size:10px;margin-top:11px;letter-spacing:1px">VOLTERRA v11 · MODO TRABAJADOR</p></div>';
   $('#npSave').onclick=function(){
     var a=$('#np1').value,b=$('#np2').value;
     if(!a){toast('Escribe la nueva contraseña','alert');return}
@@ -2604,8 +2654,50 @@ buildSidebar();applyTheme();renderMenu();setRole('admin');
   }else{
     try{$('#loginUser').focus()}catch(e){}
   }
+  hideSplash();
 })();
+window.addEventListener('load',hideSplash);
 window.addEventListener('keydown',function(e){if(e.key==='Escape'){closeSheet();$('#modal').classList.remove('on')}});
+if('serviceWorker' in navigator){
+  window.addEventListener('load',function(){
+    try{navigator.serviceWorker.register('sw.js').catch(function(){})}catch(e){}
+  });
+}
 </script>
 </body>
 </html>
+
+
+              <script>
+                              const CACHE='volterra-v11';
+self.addEventListener('install',e=>{
+  e.waitUntil(caches.open(CACHE).then(c=>c.addAll(['./','./index.html'])).then(()=>self.skipWaiting()));
+});
+self.addEventListener('activate',e=>{
+  e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(n=>n!==CACHE).map(n=>caches.delete(n)))).then(()=>self.clients.claim()));
+});
+self.addEventListener('fetch',e=>{
+  const r=e.request;
+  if(r.method!=='GET')return;
+  if(r.mode==='navigate'){
+    e.respondWith(fetch(r).then(res=>{
+      const cp=res.clone();caches.open(CACHE).then(c=>c.put('./index.html',cp));return res;
+    }).catch(()=>caches.match('./index.html')));
+    return;
+  }
+  e.respondWith(caches.match(r).then(h=>{
+    if(h)return h;
+    return fetch(r).then(res=>{
+      if(res&&(res.status===200||res.type==='opaque')){
+        const cp=res.clone();caches.open(CACHE).then(c=>c.put(r,cp));
+      }
+      return res;
+    }).catch(()=>h);
+  }));
+});
+
+
+              </script>
+                        </body>
+                        </html>
+                    
