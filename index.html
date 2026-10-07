@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<title>Volterra Energía · Edición Prestige v11.1</title>
+<title>Volterra Energía · Edición Prestige v11.2</title>
 <meta name="theme-color" content="#05070E">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -45,21 +45,13 @@ try{var _d=JSON.parse(localStorage.getItem('volterra-v10'));if(_d&&_d.settings&&
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5.0.19/index.css">
 </noscript>
 <style>
-:root{--bg:#04060D;--bg2:#080D18;--bg3:#0C1220;--surface:rgba(255,255,255,.045);--surface2:rgba(255,255,255,.075);
---surface3:rgba(255,255,255,.12);--stroke:rgba(255,255,255,.09);--stroke2:rgba(255,255,255,.17);--txt:#F2F5FB;
---txt2:#C3CADB;--muted:#8A93A9;--gold1:#F8E7BE;--gold2:#E4C27C;--gold3:#C9A227;
---goldGrad:linear-gradient(115deg,#FBF0D2,#E9CB8A 26%,#C9A227 56%,#F5E0A6 82%,#B98F2C);--goldSoft:rgba(201,162,39,.14);
---cyan:#5BE3FF;--green:#4BE3A1;--red:#FF6E7E;--violet:#A68BFF;--amber:#FFC46B;
---shL:0 30px 70px -25px rgba(0,0,0,.85);--shM:0 14px 34px -14px rgba(0,0,0,.6);--ease:cubic-bezier(.22,.68,.24,1);--sbw:252px;--tbh:70px}
-html[data-theme="aurora"]{--bg:#EDE9E0;--bg2:#F7F4ED;--bg3:#FFFFFF;--surface:rgba(255,255,255,.8);--surface2:rgba(255,255,255,.96);
---surface3:rgba(20,24,40,.06);--stroke:rgba(24,28,44,.10);--stroke2:rgba(24,28,44,.2);--txt:#111726;--txt2:#333C52;
---muted:#6E7789;--gold1:#C9A227;--gold2:#A8842B;--gold3:#8C6A21;--goldGrad:linear-gradient(115deg,#D9B44A,#A8842B 45%,#C9A227);
---goldSoft:rgba(201,162,39,.16);--cyan:#0E93B8;--green:#12905F;--red:#D9465A;--violet:#6F52D6;--amber:#B57A16;
---shL:0 26px 60px -28px rgba(40,44,60,.4);--shM:0 12px 28px -14px rgba(40,44,60,.3)}
+:root{--bg:#04060D;--bg2:#080D18;--bg3:#0C1220;--surface:rgba(255,255,255,.045);--surface2:rgba(255,255,255,.075);--surface3:rgba(255,255,255,.12);--stroke:rgba(255,255,255,.09);--stroke2:rgba(255,255,255,.17);--txt:#F2F5FB;--txt2:#C3CADB;--muted:#8A93A9;--gold1:#F8E7BE;--gold2:#E4C27C;--gold3:#C9A227;--goldGrad:linear-gradient(115deg,#FBF0D2,#E9CB8A 26%,#C9A227 56%,#F5E0A6 82%,#B98F2C);--goldSoft:rgba(201,162,39,.14);--cyan:#5BE3FF;--green:#4BE3A1;--red:#FF6E7E;--violet:#A68BFF;--amber:#FFC46B;--shL:0 30px 70px -25px rgba(0,0,0,.85);--shM:0 14px 34px -14px rgba(0,0,0,.6);--ease:cubic-bezier(.22,.68,.24,1);--sbw:252px;--tbh:70px}
+html[data-theme="aurora"]{--bg:#EDE9E0;--bg2:#F7F4ED;--bg3:#FFFFFF;--surface:rgba(255,255,255,.8);--surface2:rgba(255,255,255,.96);--surface3:rgba(20,24,40,.06);--stroke:rgba(24,28,44,.10);--stroke2:rgba(24,28,44,.2);--txt:#111726;--txt2:#333C52;--muted:#6E7789;--gold1:#C9A227;--gold2:#A8842B;--gold3:#8C6A21;--goldGrad:linear-gradient(115deg,#D9B44A,#A8842B 45%,#C9A227);--goldSoft:rgba(201,162,39,.16);--cyan:#0E93B8;--green:#12905F;--red:#D9465A;--violet:#6F52D6;--amber:#B57A16;--shL:0 26px 60px -28px rgba(40,44,60,.4);--shM:0 12px 28px -14px rgba(40,44,60,.3)}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{height:100%}
 body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--txt);overflow:hidden;-webkit-font-smoothing:antialiased;overscroll-behavior:none}
 button,input,select,textarea{font-family:inherit;color:inherit}
+input:focus-visible,textarea:focus-visible,select:focus-visible{outline:none}
 .mono{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
 .serif{font-family:'Playfair Display',Georgia,serif}
 .gold-text{background:var(--goldGrad);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% auto;animation:shine 7s linear infinite}
@@ -69,22 +61,16 @@ button,input,select,textarea{font-family:inherit;color:inherit}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 ::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-thumb{background:var(--stroke2);border-radius:9px}
 #errbar{display:none;position:fixed;top:0;left:0;right:0;z-index:999;background:#B3261E;color:#fff;font-size:12px;font-weight:700;padding:10px 16px;text-align:center}
-.auth{position:fixed;inset:0;z-index:300;display:grid;place-items:center;padding:22px;overflow:auto;overscroll-behavior:contain;
-background:radial-gradient(900px 620px at 12% -8%,rgba(201,162,39,.22),transparent 60%),radial-gradient(800px 600px at 108% 108%,rgba(91,227,255,.14),transparent 60%),linear-gradient(160deg,#05070E,#0A0F1C 55%,#04060D);transition:opacity .6s var(--ease),visibility .6s}
+.auth{position:fixed;inset:0;z-index:300;display:flex;overflow:auto;overscroll-behavior:contain;padding:22px;background:radial-gradient(900px 620px at 12% -8%,rgba(201,162,39,.22),transparent 60%),radial-gradient(800px 600px at 108% 108%,rgba(91,227,255,.14),transparent 60%),linear-gradient(160deg,#05070E,#0A0F1C 55%,#04060D);transition:opacity .6s var(--ease),visibility .6s}
 .auth.off{opacity:0;visibility:hidden;pointer-events:none}
-.auth::before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
-background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
-background-size:46px 46px;mask-image:radial-gradient(circle at 50% 40%,#000,transparent 78%);-webkit-mask-image:radial-gradient(circle at 50% 40%,#000,transparent 78%)}
-.auth::after{content:"";position:absolute;width:42vw;height:42vw;left:-10vw;top:-12vw;border-radius:50%;filter:blur(80px);
-background:radial-gradient(circle,rgba(201,162,39,.28),transparent 65%);animation:float1 20s ease-in-out infinite alternate;pointer-events:none}
+.auth::before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:46px 46px;mask-image:radial-gradient(circle at 50% 40%,#000,transparent 78%);-webkit-mask-image:radial-gradient(circle at 50% 40%,#000,transparent 78%)}
+.auth::after{content:"";position:absolute;width:42vw;height:42vw;left:-10vw;top:-12vw;border-radius:50%;filter:blur(80px);background:radial-gradient(circle,rgba(201,162,39,.28),transparent 65%);animation:float1 20s ease-in-out infinite alternate;pointer-events:none}
 @keyframes float1{to{transform:translate(6vw,4vw) scale(1.08)}}
 @keyframes float2{to{transform:translate(-5vw,-3vw) scale(1.12)}}
-.auth-card{position:relative;width:100%;max-width:430px;border-radius:30px;padding:28px 26px 24px;
-background:linear-gradient(160deg,rgba(22,28,44,.92),rgba(8,11,20,.94));border:1px solid rgba(201,162,39,.28);box-shadow:var(--shL);backdrop-filter:blur(20px)}
+.auth-card{position:relative;margin:auto;width:100%;max-width:430px;border-radius:30px;padding:28px 26px 24px;background:linear-gradient(160deg,rgba(22,28,44,.92),rgba(8,11,20,.94));border:1px solid rgba(201,162,39,.28);box-shadow:var(--shL);backdrop-filter:blur(20px)}
 .auth-card.shake{animation:shake .45s}
 @keyframes shake{10%,90%{transform:translateX(-3px)}30%,70%{transform:translateX(6px)}50%{transform:translateX(-8px)}}
-.auth-logo{width:66px;height:66px;margin:0 auto;border-radius:21px;display:grid;place-items:center;background:linear-gradient(150deg,#151C2E,#05080F);
-border:1px solid rgba(201,162,39,.5);box-shadow:0 0 50px -8px rgba(201,162,39,.7);position:relative}
+.auth-logo{width:66px;height:66px;margin:0 auto;border-radius:21px;display:grid;place-items:center;background:linear-gradient(150deg,#151C2E,#05080F);border:1px solid rgba(201,162,39,.5);box-shadow:0 0 50px -8px rgba(201,162,39,.7);position:relative}
 .auth-logo::after{content:"";position:absolute;inset:-7px;border-radius:26px;border:1px solid rgba(201,162,39,.4);animation:ringpulse 2.8s ease-out infinite;pointer-events:none}
 @keyframes ringpulse{0%{transform:scale(.94);opacity:.9}100%{transform:scale(1.14);opacity:0}}
 .auth-logo svg{width:30px;height:30px}
@@ -106,14 +92,14 @@ border:1px solid rgba(201,162,39,.5);box-shadow:0 0 50px -8px rgba(201,162,39,.7
 .iw input::placeholder{color:var(--muted);font-weight:500}
 .iw button{background:none;border:0;cursor:pointer;padding:6px;display:grid;place-items:center}
 .iw button svg{stroke:var(--muted)}
-.auth-row{display:flex;align-items:center;justify-content:space-between;margin:13px 2px 14px}
+.auth-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:13px 2px 14px}
 .check{display:flex;align-items:center;gap:9px;font-size:11.5px;color:var(--txt2);cursor:pointer;font-weight:600}
 .check input{display:none}
 .check i{width:19px;height:19px;border-radius:6px;border:1px solid var(--stroke2);background:rgba(255,255,255,.05);display:grid;place-items:center;transition:.25s;flex:0 0 auto}
 .check i::after{content:"";width:9px;height:5px;border-left:2px solid #1A1408;border-bottom:2px solid #1A1408;transform:rotate(-45deg) scale(0);transition:.25s;margin-top:-2px}
 .check input:checked+i{background:var(--goldGrad);border-color:transparent}
 .check input:checked+i::after{transform:rotate(-45deg) scale(1)}
-.auth-link{font-size:11.5px;color:var(--gold2);font-weight:700;cursor:pointer;background:none;border:0}
+.auth-link{font-size:11.5px;color:var(--gold2);font-weight:700;cursor:pointer;background:none;border:0;text-align:right}
 .cred-hint{margin-top:14px;padding:11px 13px;border-radius:14px;text-align:center;font-size:11px;background:var(--goldSoft);border:1px dashed rgba(201,162,39,.45);color:var(--txt2);line-height:1.7}
 .cred-hint b{color:var(--gold1);font-family:'JetBrains Mono',monospace;font-size:12.5px}
 .auth-legal{text-align:center;font-size:9.5px;color:var(--muted);margin-top:12px;letter-spacing:1px;line-height:1.7}
@@ -132,8 +118,7 @@ border:1px solid rgba(201,162,39,.5);box-shadow:0 0 50px -8px rgba(201,162,39,.7
 .boot-bar{width:160px;height:2px;border-radius:99px;background:rgba(255,255,255,.1);margin:24px auto 0;overflow:hidden}
 .boot-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#FBF0D2,#C9A227);animation:bload 1.2s var(--ease) forwards}
 @keyframes bload{to{width:100%}}
-.shell{position:fixed;inset:0;display:flex;overflow:hidden;max-width:100%;
-background:radial-gradient(1000px 620px at 100% -10%,rgba(201,162,39,.10),transparent 60%),radial-gradient(800px 520px at -10% 110%,rgba(91,227,255,.08),transparent 60%),linear-gradient(180deg,var(--bg2),var(--bg))}
+.shell{position:fixed;inset:0;display:flex;overflow:hidden;max-width:100%;background:radial-gradient(1000px 620px at 100% -10%,rgba(201,162,39,.10),transparent 60%),radial-gradient(800px 520px at -10% 110%,rgba(91,227,255,.08),transparent 60%),linear-gradient(180deg,var(--bg2),var(--bg))}
 .shell::before,.shell::after{content:"";position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
 .shell::before{width:44vw;height:44vw;left:-10vw;top:-12vw;background:radial-gradient(circle,rgba(201,162,39,.16),transparent 65%);animation:float1 22s ease-in-out infinite alternate}
 .shell::after{width:38vw;height:38vw;right:-8vw;bottom:-10vw;background:radial-gradient(circle,rgba(91,227,255,.12),transparent 65%);animation:float2 26s ease-in-out infinite alternate}
@@ -161,8 +146,7 @@ html[data-theme="aurora"] .shell::after{background:radial-gradient(circle,rgba(1
 .sb-av div{width:100%;height:100%;border-radius:9.5px;background:linear-gradient(150deg,#101725,#05080F);display:grid;place-items:center;font-family:'Playfair Display',serif;font-size:12px;color:var(--gold2)}
 .sb-user b{font-size:11.5px;display:block}.sb-user span{font-size:9px;color:var(--muted)}
 .col{flex:1;min-width:0;max-width:100%;display:flex;flex-direction:column;position:relative}
-.topbar{flex:0 0 auto;display:flex;align-items:center;gap:11px;padding:12px 16px;border-bottom:1px solid var(--stroke);
-background:linear-gradient(180deg,rgba(8,13,24,.86),rgba(8,13,24,.42));backdrop-filter:blur(18px);z-index:30;padding-top:calc(12px + env(safe-area-inset-top))}
+.topbar{flex:0 0 auto;display:flex;align-items:center;gap:11px;padding:12px 16px;border-bottom:1px solid var(--stroke);background:linear-gradient(180deg,rgba(8,13,24,.86),rgba(8,13,24,.42));backdrop-filter:blur(18px);z-index:30;padding-top:calc(12px + env(safe-area-inset-top))}
 html[data-theme="aurora"] .topbar{background:linear-gradient(180deg,rgba(247,244,237,.92),rgba(247,244,237,.5))}
 .tb-title{min-width:0;flex:1}
 .tb-title h2{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -410,7 +394,6 @@ html[data-theme="aurora"] .toast{background:rgba(255,255,255,.97);border-color:r
 <div id="splash"><div class="slogo"><svg viewBox="0 0 24 24"><path d="M13.6 1.6L5.2 13.1h5.1L9.1 22.4l8.7-11.9h-5.3z" fill="#E4C27C"/></svg></div><h1>VOLTERRA</h1><p>Cargando plataforma…</p><div class="sbar"><i></i></div></div>
 <script>setTimeout(function(){var s=document.getElementById('splash');if(s){s.classList.add('hide');setTimeout(function(){if(s&&s.parentNode)s.parentNode.removeChild(s)},600)}},7000);</script>
 <div id="errbar"></div>
-
 <div class="auth" id="auth">
   <div class="auth-card" id="authCard">
     <div class="auth-logo"><svg viewBox="0 0 24 24"><defs><linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
@@ -445,7 +428,6 @@ html[data-theme="aurora"] .toast{background:rgba(255,255,255,.97);border-color:r
     <p class="auth-legal">Conexión cifrada · Auditoría activa<br>Grupo Volterra Energía © 2026</p>
   </div>
 </div>
-
 <div class="boot" id="boot">
   <div class="boot-in">
     <div class="boot-logo"><svg viewBox="0 0 24 24"><path d="M13.6 1.6L5.2 13.1h5.1L9.1 22.4l8.7-11.9h-5.3z" fill="#E4C27C"/></svg></div>
@@ -454,7 +436,6 @@ html[data-theme="aurora"] .toast{background:rgba(255,255,255,.97);border-color:r
     <div class="boot-bar"><i></i></div>
   </div>
 </div>
-
 <div class="shell hidden" id="shellAdmin">
   <aside class="sidebar">
     <div class="sb-brand">
@@ -601,7 +582,7 @@ html[data-theme="aurora"] .toast{background:rgba(255,255,255,.97);border-color:r
             <button class="btn danger" data-act="reset-db">Restablecer demo</button></div></div>
         </div>
         <div class="card" style="text-align:center"><p class="eyebrow">Grupo Volterra Energía</p>
-          <p class="muted" style="font-size:10.5px;margin-top:8px;letter-spacing:1px;line-height:1.8">VERSIÓN 11.1 · EDICIÓN PRESTIGE · PWA<br>iPad / iPhone / Android / PC<br>© 2026 Grupo Volterra</p></div>
+          <p class="muted" style="font-size:10.5px;margin-top:8px;letter-spacing:1px;line-height:1.8">VERSIÓN 11.2 · EDICIÓN PRESTIGE · PWA<br>iPad / iPhone / Android / PC<br>© 2026 Grupo Volterra</p></div>
       </section>
       <section class="view" id="v-menu">
         <div class="vhead"><div><h1>Módulos</h1><p>Todas las áreas de la plataforma</p></div></div>
@@ -618,7 +599,6 @@ html[data-theme="aurora"] .toast{background:rgba(255,255,255,.97);border-color:r
     </nav>
   </div>
 </div>
-
 <div class="shell hidden" id="shellWorker">
   <div class="col">
     <header class="topbar">
@@ -677,7 +657,6 @@ html[data-theme="aurora"] .toast{background:rgba(255,255,255,.97);border-color:r
     </nav>
   </div>
 </div>
-
 <div class="backdrop" id="backdrop"></div>
 <div class="sheet" id="sh-form"><div class="grip"></div>
   <div class="shead"><div><p class="eyebrow" id="formEyebrow">Volterra</p><h2 id="formTitle">—</h2><p id="formSub"></p></div>
@@ -692,7 +671,6 @@ html[data-theme="aurora"] .toast{background:rgba(255,255,255,.97);border-color:r
   <div class="btn-row" style="margin-top:18px"><button class="btn ghost" id="mCancel">Cancelar</button>
   <button class="btn gold" id="mOk">Aceptar</button></div></div></div>
 <div class="toasts" id="toasts"></div>
-
 <script>
 window.addEventListener('error',function(e){
   if(!e.message||String(e.message).indexOf('Script error')===0)return;
@@ -713,6 +691,19 @@ function resetScroll(){
   var w=document.getElementById('wmain');if(w)w.scrollLeft=0;
   var a=document.querySelector('.auth');if(a)a.scrollLeft=0;
 }
+function viewportSettled(){
+  return new Promise(function(res){
+    var w=window.innerWidth,h=window.innerHeight,ok=0;
+    function tick(){
+      if(window.innerWidth===w&&window.innerHeight===h){ok++}else{ok=0;w=window.innerWidth;h=window.innerHeight}
+      if(ok>=4){res();return}
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+    setTimeout(res,1800);
+  });
+}
+function minWait(ms){return new Promise(function(res){setTimeout(res,ms)})}
 var $=function(s,c){return (c||document).querySelector(s)};
 var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
 var nf=function(n,d){return new Intl.NumberFormat('es-ES',{minimumFractionDigits:d==null?2:d,maximumFractionDigits:d==null?2:d}).format(Number(n)||0)};
@@ -1333,7 +1324,7 @@ function invoicePdf(inv){
   p.r(40,150,515,52,'0.95 0.96 0.94');
   p.t(56,182,'Energia 100% renovable con Garantias de Origen CNMC.','/F1',9,'0.15 0.3 0.25');
   p.t(56,166,'Factura electronica con sello de tiempo · '+co.name,'/F1',8,'0.35 0.4 0.45');
-  p.t(40,128,'Volterra Gestion v11.1 · '+new Date().toLocaleString('es-ES'),'/F1',7.5,'0.55 0.6 0.68');
+  p.t(40,128,'Volterra Gestion v11.2 · '+new Date().toLocaleString('es-ES'),'/F1',7.5,'0.55 0.6 0.68');
   return new Blob([buildPdf([p.o])],{type:'application/pdf'});
 }
 function reportPdf(mode){
@@ -1374,7 +1365,7 @@ function reportPdf(mode){
   rows.forEach(function(r,i){
     if(i%2===0)p.r(40,y-5,515,17,'0.965 0.965 0.975');
     p.t(50,y,r[0],'/F1',9.5,'0.16 0.18 0.24');p.t(440,y,r[1],'/F2',9.5,'0.1 0.12 0.18');y-=18});
-  p.t(40,80,'Informe generado por Vera IA · Volterra Gestion v11.1','/F1',7.5,'0.55 0.6 0.68');
+  p.t(40,80,'Informe generado por Vera IA · Volterra Gestion v11.2','/F1',7.5,'0.55 0.6 0.68');
   return new Blob([buildPdf([p.o])],{type:'application/pdf'});
 }
 var statusChip=function(s){return{pendiente:'red',asignada:'amber',encurso:'cyan',finalizada:'green'}[s]||''};
@@ -2434,7 +2425,7 @@ function renderWProfile(){
     '<p class="eyebrow">Sesión</p>'+
     '<p class="muted" style="font-size:11.5px;margin-top:8px">Vuelve al inicio de sesión para entrar como Administrador u otro Trabajador.</p>'+
     '<button class="btn gold full xl" style="margin-top:12px" id="wLogoutBig">'+svg('out')+'Cambiar de usuario</button>'+
-    '<p class="muted" style="font-size:10px;margin-top:11px;letter-spacing:1px">VOLTERRA v11.1 · MODO TRABAJADOR</p></div>';
+    '<p class="muted" style="font-size:10px;margin-top:11px;letter-spacing:1px">VOLTERRA v11.2 · MODO TRABAJADOR</p></div>';
   $('#npSave').onclick=function(){
     var a=$('#np1').value,b=$('#np2').value;
     if(!a){toast('Escribe la nueva contraseña','alert');return}
@@ -2647,12 +2638,15 @@ buildSidebar();applyTheme();renderMenu();setRole('admin');
   if(r&&r.u){setRole(r.role==='worker'?'worker':'admin');$('#loginUser').value=r.u;}
   resetScroll();
   var fr=(document.fonts&&document.fonts.ready)?document.fonts.ready:Promise.resolve();
-  var cap=new Promise(function(res){setTimeout(res,1600)});
-  Promise.race([fr,cap]).then(function(){
+  Promise.all([
+    Promise.race([fr,minWait(1600)]),
+    viewportSettled(),
+    minWait(500)
+  ]).then(function(){
     requestAnimationFrame(function(){hideSplash();resetScroll()});
   });
 })();
-window.addEventListener('load',function(){hideSplash();resetScroll()});
+window.addEventListener('load',resetScroll);
 window.addEventListener('pageshow',resetScroll);
 window.addEventListener('resize',resetScroll);
 window.addEventListener('orientationchange',function(){setTimeout(resetScroll,150)});
