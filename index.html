@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<title>Volterra Energía · Edición Prestige v12.0</title>
+<title>Volterra Energía · Edición Prestige v12.1</title>
 <meta name="theme-color" content="#05070E">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,14 +27,6 @@ try{var _d=JSON.parse(localStorage.getItem('volterra-v10'));if(_d&&_d.settings&&
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/cormorant-garamond@5.1.0/index.css" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/cormorant-garamond@5.1.0/wght-italic.css" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/montserrat@5.1.0/index.css" media="print" onload="this.media='all'">
-<noscript>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5.0.19/index.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5.0.19/index.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5.0.19/index.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/cormorant-garamond@5.1.0/index.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/cormorant-garamond@5.1.0/wght-italic.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/montserrat@5.1.0/index.css">
-</noscript>
 <style>
 :root{--bg:#04060D;--bg2:#080D18;--bg3:#0C1220;--surface:rgba(255,255,255,.045);--surface2:rgba(255,255,255,.075);--surface3:rgba(255,255,255,.12);--stroke:rgba(255,255,255,.09);--stroke2:rgba(255,255,255,.17);--txt:#F2F5FB;--txt2:#C3CADB;--muted:#8A93A9;--gold1:#F8E7BE;--gold2:#E4C27C;--gold3:#C9A227;--goldGrad:linear-gradient(115deg,#FBF0D2,#E9CB8A 26%,#C9A227 56%,#F5E0A6 82%,#B98F2C);--goldSoft:rgba(201,162,39,.14);--cyan:#5BE3FF;--green:#4BE3A1;--red:#FF6E7E;--violet:#A68BFF;--amber:#FFC46B;--shL:0 30px 70px -25px rgba(0,0,0,.85);--shM:0 14px 34px -14px rgba(0,0,0,.6);--ease:cubic-bezier(.22,.68,.24,1);--sbw:252px;--tbh:70px}
 html[data-theme="aurora"]{--bg:#EDE9E0;--bg2:#F7F4ED;--bg3:#FFFFFF;--surface:rgba(255,255,255,.8);--surface2:rgba(255,255,255,.96);--surface3:rgba(20,24,40,.06);--stroke:rgba(24,28,44,.10);--stroke2:rgba(24,28,44,.2);--txt:#111726;--txt2:#333C52;--muted:#6E7789;--gold1:#C9A227;--gold2:#A8842B;--gold3:#8C6A21;--goldGrad:linear-gradient(115deg,#D9B44A,#A8842B 45%,#C9A227);--goldSoft:rgba(201,162,39,.16);--cyan:#0E93B8;--green:#12905F;--red:#D9465A;--violet:#6F52D6;--amber:#B57A16;--shL:0 26px 60px -28px rgba(40,44,60,.4);--shM:0 12px 28px -14px rgba(40,44,60,.3)}
@@ -342,7 +334,6 @@ html[data-theme="aurora"] .toast{background:rgba(255,255,255,.97);border-color:r
 .legend{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
 .lg{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--txt2);padding:6px 11px;border-radius:99px;background:var(--surface);border:1px solid var(--stroke)}
 .lg i{width:8px;height:8px;border-radius:3px;display:block}
-.lg b{font-family:'JetBrains Mono',monospace}
 .tbl{width:100%;border-collapse:collapse;font-size:12.5px}
 .tbl th{text-align:left;font-size:9px;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted);font-weight:800;padding:9px 8px;border-bottom:1px solid var(--stroke)}
 .tbl td{padding:11px 8px;border-bottom:1px solid var(--stroke)}
@@ -379,8 +370,6 @@ html[data-theme="aurora"] .toast{background:rgba(255,255,255,.97);border-color:r
 .fab{position:absolute;right:15px;bottom:calc(var(--tbh) + 16px);width:54px;height:54px;border-radius:19px;border:1px solid rgba(201,162,39,.5);cursor:pointer;z-index:39;display:grid;place-items:center;background:linear-gradient(150deg,rgba(28,22,8,.96),rgba(10,12,20,.96));box-shadow:0 16px 40px -14px rgba(201,162,39,.7);transition:.3s}
 .fab:hover{transform:translateY(-3px);box-shadow:0 22px 48px -14px rgba(201,162,39,.85)}
 .fab svg{width:24px;height:24px;stroke:var(--gold2);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-</style>
-<style>
 :root{--g2:#D4AF37;--g3:#F8E7A1;--g4:#FFFBE8;--ivory:#F1E9D6;--foil:linear-gradient(100deg,#5C451C 0%,#A8842C 12%,#D4AF37 28%,#F8E7A1 42%,#FFFBE8 50%,#F8E7A1 58%,#D4AF37 72%,#A8842C 88%,#5C451C 100%);--serif:'Cormorant Garamond Variable',Cormorant Garamond,Georgia,serif;--sans:'Montserrat Variable',Montserrat,system-ui,sans-serif;--expo:cubic-bezier(.19,1,.22,1)}
 #intro{position:fixed;inset:0;z-index:600;overflow:hidden;background:radial-gradient(130% 100% at 50% 38%,#0d0a06 0%,#070503 46%,#030202 100%);transition:opacity .8s ease,visibility .8s ease}
 #intro.out{opacity:0;visibility:hidden;pointer-events:none}
@@ -569,18 +558,14 @@ for(j=0;j<bokeh.length;j++){var k=bokeh[j];k.y-=k.v*.016;if(k.y<-.3){k.y=1.3;k.x
 for(j=0;j<leaves.length;j++){var f=leaves[j];f.y-=f.v*.016;f.x+=f.vx*.016;f.rot+=f.vr;if(f.y<-.05){f.y=1.05;f.x=Math.random()}var fa=.05+.05*Math.abs(Math.sin(t*.7+f.p));ctx.save();ctx.translate(f.x*W,f.y*H);ctx.rotate(f.rot);ctx.fillStyle='rgba(212,175,55,'+fa+')';ctx.fillRect(-f.len/2,-f.w/2,f.len,f.w);ctx.restore()}
 for(j=0;j<dust.length;j++){var o=dust[j];o.y-=o.v*.016;o.x+=o.dx*.016;if(o.y<-.02){o.y=1.02;o.x=Math.random()}var tw=.10+.36*Math.abs(Math.sin(t*.95+o.p));ctx.fillStyle='rgba('+o.c+','+tw+')';ctx.beginPath();ctx.arc(o.x*W,o.y*H,o.s,0,6.283);ctx.fill()}
 if(phase>=4&&now-lastGlint>1900&&!doneFlag){lastGlint=now;glint(W/2+(Math.random()-.5)*W*.4,H*.46+(Math.random()-.5)*H*.26,.8)}
-for(j=glints.length-1;j>=0;j--){var G=glints[j],age=now-G.born,kk=age/G.life;if(kk>=1){glints.splice(j,1);continue}var e=Math.sin(kk*Math.PI),R=G.r*(.4+e*.9);ctx.save();ctx.translate(G.x,G.y);ctx.rotate(G.rot);ctx.strokeStyle='rgba(255,251,232,'+(.5*e)+')';ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(-R,0);ctx.lineTo(R,0);ctx.moveTo(0,-R);ctx.lineTo(0,R);ctx.stroke();ctx.strokeStyle='rgba(248,231,161,'+(.26*e)+')';ctx.lineWidth=.4;var r2=R*.42;ctx.beginPath();ctx.moveTo(-r2,-r2);ctx.lineTo(r2,r2);ctx.moveTo(-r2,r2);ctx.lineTo(r2,-r2);ctx.stroke();ctx.fillStyle='rgba(255,255,255,'+(.65*e)+')';ctx.beginPath();ctx.arc(0,0,.9,0,6.283);ctx.fill();ctx.restore()}
-parallax();}
+for(j=glints.length-1;j>=0;j--){var G=glints[j],age=now-G.born,kk=age/G.life;if(kk>=1){glints.splice(j,1);continue}var e=Math.sin(kk*Math.PI),R=G.r*(.4+e*.9);ctx.save();ctx.translate(G.x,G.y);ctx.rotate(G.rot);ctx.strokeStyle='rgba(255,251,232,'+(.5*e)+')';ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(-R,0);ctx.lineTo(R,0);ctx.moveTo(0,-R);ctx.lineTo(0,R);ctx.stroke();ctx.strokeStyle='rgba(248,231,161,'+(.26*e)+')';ctx.lineWidth=.4;var r2=R*.42;ctx.beginPath();ctx.moveTo(-r2,-r2);ctx.lineTo(r2,r2);ctx.moveTo(-r2,r2);ctx.lineTo(r2,-r2);ctx.stroke();ctx.fillStyle='rgba(255,255,255,'+(.65*e)+')';ctx.beginPath();ctx.arc(0,0,.9,0,6.283);ctx.fill();ctx.restore()}}
 requestAnimationFrame(loop);
 function letterGlints(){for(var j=0;j<spans.length;j++){(function(idx){TL.push(setTimeout(function(){var sp=spans[idx];if(!sp)return;var r=sp.getBoundingClientRect();glint(r.left+r.width/2,r.top+r.height*.36,.9)},3200+idx*115+520))})(j)}}
-var tx=0,ty=0,mx=0,my=0;
-if(!reduce&&window.matchMedia('(pointer:fine)').matches){window.addEventListener('mousemove',function(e){tx=(e.clientX/window.innerWidth-.5);ty=(e.clientY/window.innerHeight-.5)},{passive:true})}
-var PXS=[['pxE',7],['pxB',4],['pxW',5],['pxD',3],['pxT',3],['pxS',2]];
-function parallax(){mx+=(tx-mx)*.04;my+=(ty-my)*.04;for(var j=0;j<PXS.length;j++){var el=document.getElementById(PXS[j][0]);if(el)el.style.transform='translate3d('+(mx*PXS[j][1]).toFixed(2)+'px,'+(my*PXS[j][1]).toFixed(2)+'px,0)'}}
 function at(ms,fn){TL.push(setTimeout(fn,ms))}
 function settled(){return new Promise(function(res){var w=window.innerWidth,h=window.innerHeight,ok=0;function tick(){if(window.innerWidth===w&&window.innerHeight===h){ok++}else{ok=0;w=window.innerWidth;h=window.innerHeight}if(ok>=3){res();return}requestAnimationFrame(tick)}requestAnimationFrame(tick);setTimeout(res,1200)})}
+function wakeLogin(){var lp=document.getElementById('loginPass');if(lp){lp.type='password';lp.setAttribute('autocomplete','current-password')}var lu=document.getElementById('loginUser');if(lu)lu.setAttribute('autocomplete','username')}
 function closeIntro(){if(closed)return;closed=true;introActive=false;var el=document.getElementById('intro');if(!el)return;el.classList.add('out');setTimeout(function(){if(el&&el.parentNode)el.parentNode.removeChild(el);try{window.scrollTo(0,0)}catch(e){}},900)}
-function finish(){if(doneFlag)return;doneFlag=true;phase=0;body.classList.add('done');Promise.all([settled(),new Promise(function(r){setTimeout(r,250)})]).then(closeIntro)}
+function finish(){if(doneFlag)return;doneFlag=true;phase=0;body.classList.add('done');wakeLogin();Promise.all([settled(),new Promise(function(r){setTimeout(r,250)})]).then(closeIntro)}
 function run(){TL.forEach(clearTimeout);TL=[];doneFlag=false;phase=0;glints=[];body.classList.remove('p1','p2','p3','p4','p5','p6','static','done');void document.getElementById('intro').offsetWidth;
 if(reduce){body.classList.add('p1','p2','p3','p4','p5','p6','static');setTimeout(finish,900);return}
 at(400,function(){body.classList.add('p1');phase=1});
@@ -614,10 +599,10 @@ run();
 <form id="loginForm" autocomplete="off" onsubmit="return false">
 <div class="field" style="margin-top:4px"><label id="lblUser">Usuario de administrador</label>
 <div class="iw"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
-<input id="loginUser" type="text" placeholder="Introduce tu usuario" autocomplete="username"></div></div>
+<input id="loginUser" type="text" placeholder="Introduce tu usuario" autocomplete="off"></div></div>
 <div class="field"><label>Contraseña</label>
 <div class="iw"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
-<input id="loginPass" type="password" placeholder="Introduce tu contraseña" autocomplete="current-password">
+<input id="loginPass" type="text" placeholder="Introduce tu contraseña" autocomplete="off">
 <button type="button" id="togglePass"><svg viewBox="0 0 24 24" id="eyeIcon"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></button></div></div>
 <div class="auth-row">
 <label class="check"><input type="checkbox" id="remember" checked><i></i>Recordar usuario (la contraseña se pide siempre)</label>
@@ -783,7 +768,7 @@ run();
 <button class="btn danger" data-act="reset-db">Restablecer demo</button></div></div>
 </div>
 <div class="card" style="text-align:center"><p class="eyebrow">Grupo Volterra Energía</p>
-<p class="muted" style="font-size:10.5px;margin-top:8px;letter-spacing:1px;line-height:1.8">VERSIÓN 12.0 · APERTURA OR FEUILLÉ · PWA<br>iPad / iPhone / Android / PC<br>© 2026 Grupo Volterra</p></div>
+<p class="muted" style="font-size:10.5px;margin-top:8px;letter-spacing:1px;line-height:1.8">VERSIÓN 12.1 · APERTURA OR FEUILLÉ · PWA<br>iPad / iPhone / Android / PC<br>© 2026 Grupo Volterra</p></div>
 </section>
 <section class="view" id="v-menu">
 <div class="vhead"><div><h1>Módulos</h1><p>Todas las áreas de la plataforma</p></div></div>
@@ -1492,7 +1477,7 @@ p.t(368,y+4,'TOTAL A PAGAR','/F2',11,'1 1 1');p.t(488,y+2,nf(t.total,2)+' E','/F
 p.r(40,150,515,52,'0.95 0.96 0.94');
 p.t(56,182,'Energia 100% renovable con Garantias de Origen CNMC.','/F1',9,'0.15 0.3 0.25');
 p.t(56,166,'Factura electronica con sello de tiempo · '+co.name,'/F1',8,'0.35 0.4 0.45');
-p.t(40,128,'Volterra Gestion v12.0 · '+new Date().toLocaleString('es-ES'),'/F1',7.5,'0.55 0.6 0.68');
+p.t(40,128,'Volterra Gestion v12.1 · '+new Date().toLocaleString('es-ES'),'/F1',7.5,'0.55 0.6 0.68');
 return new Blob([buildPdf([p.o])],{type:'application/pdf'});
 }
 function reportPdf(mode){
@@ -1533,7 +1518,7 @@ p.t(40,y,'INDICADORES','/F2',10,'0.79 0.64 0.15');y-=22;
 rows.forEach(function(r,i){
 if(i%2===0)p.r(40,y-5,515,17,'0.965 0.965 0.975');
 p.t(50,y,r[0],'/F1',9.5,'0.16 0.18 0.24');p.t(440,y,r[1],'/F2',9.5,'0.1 0.12 0.18');y-=18});
-p.t(40,80,'Informe generado por Vera IA · Volterra Gestion v12.0','/F1',7.5,'0.55 0.6 0.68');
+p.t(40,80,'Informe generado por Vera IA · Volterra Gestion v12.1','/F1',7.5,'0.55 0.6 0.68');
 return new Blob([buildPdf([p.o])],{type:'application/pdf'});
 }
 var statusChip=function(s){return{pendiente:'red',asignada:'amber',encurso:'cyan',finalizada:'green'}[s]||''};
@@ -2109,96 +2094,22 @@ $('#vIn').value='';veraRespond(x);
 $('#vSend').onclick=veraSend;
 $('#vIn').addEventListener('keydown',function(e){if(e.key==='Enter')veraSend()});
 var EKB=[
-{k:['ohm','ley de ohm','resistencia','voltaje y corriente'],title:'⚡ Ley de Ohm',
-b:'<b>V = I × R</b> — la tensión (V) es igual a la intensidad (I) por la resistencia (R).<ul>'+
-'<li>Si conoces V e I: <b>R = V / I</b></li><li>Si conoces V y R: <b>I = V / R</b></li>'+
-'<li>Potencia relacionada: <b>P = V × I = I² × R</b></li></ul>'+
-'Ejemplo: una carga de 230 V que consume 10 A tiene R = 23 Ω y P = 2.300 W.'},
-{k:['potencia','watio','vatio','kw','monofasica','trifasica','cos phi','factor de potencia calcular'],title:'🔌 Potencia eléctrica',
-b:'<b>Monofásica:</b> P = V × I × cosφ (230 V). Ej.: 16 A × 230 V × 1 = 3.680 W.<br>'+
-'<b>Trifásica:</b> P = √3 × V × I × cosφ (400 V). Ej.: 25 A × 400 V × √3 ≈ 17,3 kW con cosφ=1.<br>'+
-'<b>kW → kWh:</b> potencia × horas de uso. 2 kW durante 3 h = 6 kWh.'},
-{k:['cable','seccion','amperaje','amperio','conductor','mm2','calibre'],title:'🔗 Sección de conductores',
-b:'La sección depende de la intensidad y de la caída de tensión admisible. Orientativo en cobre (tubo empotrado):<ul>'+
-'<li><b>1,5 mm²</b> → 15 A (alumbrado)</li><li><b>2,5 mm²</b> → 21 A (enchufes)</li>'+
-'<li><b>4 mm²</b> → 28 A (horno/lavadora)</li><li><b>6 mm²</b> → 36 A (cocina/AC)</li>'+
-'<li><b>10 mm²</b> → 50 A · <b>16 mm²</b> → 68 A · <b>25 mm²</b> → 89 A</li></ul>'+
-'Fórmula de caída de tensión monofásica: <b>S = 2 × ρ × L × I / ΔV</b> (ρ cobre = 0,0175 Ω·mm²/m).'},
-{k:['magnetotermico','termico','pio','automatico','sobrecarga','cortocircuito proteccion'],title:'🛡 Magnetotérmico (PIA)',
-b:'Protege contra <b>sobrecargas</b> (curva térmica) y <b>cortocircuitos</b> (curva magnética).<ul>'+
-'<li>Curva <b>C</b>: uso doméstico/general (arranques moderados)</li>'+
-'<li>Curva <b>D</b>: motores y cargas con punta de arranque</li>'+
-'<li>Se elige por encima de la corriente de servicio y por debajo del límite del cable</li>'+
-'<li>Poder de corte: 4,5 kA doméstico, 6-10 kA industrial</li></ul>'},
-{k:['diferencial','fuga','30ma','salvavidas','interruptor diferencial'],title:'🧯 Diferencial',
-b:'Protege a las <b>personas</b> frente a fugas de corriente a tierra.<ul>'+
-'<li>Sensibilidad estándar en viviendas: <b>30 mA</b></li>'+
-'<li>Industrial/protección de equipos: 300 mA (selectivo si hay varios)</li>'+
-'<li>Comprueba el botón de TEST cada mes</li>'+
-'<li>Si dispara: desconecta aparatos uno a uno para localizar la fuga</li></ul>'},
-{k:['tierra','puesta a tierra','pica','electrodo','pat'],title:'🌍 Puesta a tierra',
-b:'Deriva las fugas y garantiza que el diferencial dispare.<ul>'+
-'<li>Pica de cobre de 2 m clavada en el terreno + conductor de enlace</li>'+
-'<li>Resistencia objetivo: <b>&lt; 37 Ω</b> en viviendas (mejor cuanto menor)</li>'+
-'<li>El conductor de protección es <b>verde/amarillo</b> y nunca lleva corriente en servicio normal</li>'+
-'<li>Revisa continuidad y aprietes anualmente</li></ul>'},
-{k:['placa','panel','solar','fotovoltaica','autoconsumo','inversor','excedente','campo solar'],title:'☀️ Energía solar fotovoltaica',
-b:'Una instalación de autoconsumo: paneles → <b>inversor</b> (DC→AC) → cuadro → red/hogar.<ul>'+
-'<li>Panel estándar actual: <b>450-550 Wp</b>; produce ~1,8-2,2 kWh/día en España</li>'+
-'<li>Regla rápida: <b>1 kWp ≈ 4 kWh/día</b> de media anual</li>'+
-'<li>Orientación ideal: <b>sur</b>, inclinación 25-35°</li>'+
-'<li>Los excedentes se compensan en factura (o con batería)</li>'+
-'<li>Cada string debe respetar el rango MPPT del inversor</li></ul>'},
-{k:['bateria','litio','lifepo4','acumulador','soc','dod','carga descarga','almacenamiento'],title:'🔋 Baterías',
-b:'Dimensionado: <b>Capacidad (kWh) = consumo nocturno / profundidad de descarga</b>.<ul>'+
-'<li><b>LiFePO₄</b>: +6.000 ciclos, DoD 80-90%, muy seguras</li>'+
-'<li>Ejemplo: consumo nocturno 6 kWh → batería de ~7,5 kWh útiles</li>'+
-'<li>Respeta la corriente máxima de carga/descarga (CCL/DCL)</li>'+
-'<li>El BMS protege de sobrecarga, sobredescarga y temperatura</li>'+
-'<li>Plomo-AGM: DoD 50%, solo la mitad de la capacidad es útil</li></ul>'},
-{k:['led','luminaria','lumen','lux','iluminacion','alumbrado'],title:'💡 Iluminación LED',
-b:'Sustituir por LED ahorra un 60-80%.<ul><li><b>Lúmenes</b> = luz emitida; <b>W</b> = consumo</li>'+
-'<li>Eficacia buena: &gt;100 lm/W; vial: 130-150 lm/W</li>'+
-'<li>Vivienda: 2.700-3.000 K (cálida) · oficinas: 4.000 K</li>'+
-'<li>Cálculo rápido: <b>nº luminarias = (lux × m²) / (lúmenes × factor)</b></li></ul>'},
-{k:['reactiva','condensador','penalizacion','energia reactiva','compensacion'],title:'🔄 Energía reactiva',
-b:'La necesitan motores y transformadores, pero no produce trabajo útil y penaliza en factura si cosφ < 0,95.<ul>'+
-'<li>Solución: <b>batería de condensadores</b> para compensar</li>'+
-'<li>Medida en kVArh; se paga el exceso de reactiva inductiva</li>'+
-'<li>En industria: compensación automática por etapas</li></ul>'},
-{k:['aerotermia','bomba de calor','calefaccion','climatizacion','suelo radiante'],title:'♨️ Aerotermia',
-b:'Bomba de calor aire-agua: por cada 1 kW eléctrico aporta 3-5 kW térmicos (<b>COP 3-5</b>).<ul>'+
-'<li>Ideal con suelo radiante o fan-coils a baja temperatura</li>'+
-'<li>Dimensionado: demanda térmica de la vivienda (W/m² según zona climática)</li>'+
-'<li>Requiere circuito dedicado y magnetotérmico + diferencial propio</li></ul>'},
-{k:['coche electrico','vehiculo electrico','cargador','recarga','wallbox','punto de carga'],title:'🚗 Carga de vehículo eléctrico',
-b:'Niveles de carga:<ul><li><b>Schuko 3,7 kW</b>: ocasional (~8 h para 30 kWh)</li>'+
-'<li><b>Wallbox 7,4 kW</b> monofásico: lo estándar en vivienda</li>'+
-'<li><b>11-22 kW</b> trifásico: comunidades/empresa</li></ul>'+
-'Requisitos: línea dedicada desde el cuadro, diferencial tipo A (o B según cargador), magnetotérmico curva C y sección según ITC-BT-52.'},
-{k:['rebt','reglamento','itc','normativa','boletin','legalizacion','itc-bt'],title:'📜 Normativa (REBT)',
-b:'Reglamento Electrotécnico de Baja Tensión (RD 842/2002). Instrucciones clave:<ul>'+
-'<li><b>ITC-BT-25</b>: circuito interior vivienda (C1 alumbrado, C2 enchufes, C3 cocina, C4 lavadora, C5 baño, C6 calefacción/AC)</li>'+
-'<li><b>ITC-BT-52</b>: infraestructura de recarga de VE</li>'+
-'<li><b>ITC-BT-04</b>: documentación y boletín (CIE)</li>'+
-'<li>Legalización + boletín para nuevas instalaciones o aumentos de potencia</li></ul>'},
-{k:['averia','dispara','salta','corte','diagnostico','no hay luz','fallo'],title:'🔧 Diagnóstico de averías',
-b:'Protocolo rápido cuando "salta" algo:<ul>'+
-'<li><b>Salta el diferencial</b> → fuga a tierra: desconecta aparatos uno a uno</li>'+
-'<li><b>Salta el magnetotérmico</b> → sobrecarga o cortocircuito: revisa el circuito afectado</li>'+
-'<li><b>Sin luz parcial</b> → comprueba tensión en bornes del PIA con multímetro</li>'+
-'<li><b>Parpadeos</b> → empalmes flojos, neutro deficiente o caída de tensión</li>'+
-'<li>Siempre: cortar, verificar ausencia de tensión y usar EPIs</li></ul>'},
-{k:['contador','telemedida','lectura','potencia contratada','icp','maximetro'],title:'📟 Contador y potencia',
-b:'El contador inteligente registra curva de carga cada 15 minutos.<ul>'+
-'<li><b>Potencia contratada</b>: si el ICP/ICP integrado dispara con frecuencia, hay que subirla</li>'+
-'<li>Discriminación horaria: punta (cara), llano, valle (barata, 00-08 h)</li>'+
-'<li>La lectura facturada es la real por telemedida, no estimada</li></ul>'},
-{k:['proteccion','selectividad','coordinacion','fusible','sobretension','descargador','spd'],title:'🧩 Selectividad y sobretensiones',
-b:'<b>Selectividad</b>: ante un fallo debe disparar solo la protección más cercana.<ul>'+
-'<li>Se coordina por intensidad y tiempo entre aguas arriba/abajo</li>'+
-'<li><b>SPD (descargador)</b>: protege de sobretensiones transitorias (rayos, maniobras). Tipo 1+2 en cabecera</li>'+
-'<li>Fusibles: corte muy rápido, usados en CT y baterías DC</li></ul>'}
+{k:['ohm','ley de ohm','resistencia','voltaje'],title:'⚡ Ley de Ohm',b:'<b>V = I × R</b>. Derivadas: <b>R = V/I</b>, <b>I = V/R</b>, y <b>P = V×I = I²×R</b>. Ej.: 230 V y 10 A → R = 23 Ω, P = 2.300 W.'},
+{k:['potencia','watio','vatio','kw','monofasica','trifasica','cos phi'],title:'🔌 Potencia eléctrica',b:'Mono: <b>P = V×I×cosφ</b> (230 V). Tri: <b>P = √3×V×I×cosφ</b> (400 V). kWh = kW × horas. Ej.: 25 A a 400 V tri ≈ 17,3 kW.'},
+{k:['cable','seccion','amperaje','amperio','conductor','mm2'],title:'🔗 Sección de conductores',b:'Cobre (tubo empotrado): <b>1,5 mm²</b>→15 A · <b>2,5</b>→21 A · <b>4</b>→28 A · <b>6</b>→36 A · <b>10</b>→50 A · <b>16</b>→68 A · <b>25</b>→89 A. Caída de tensión mono: <b>S = 2ρLI/ΔV</b> (ρ=0,0175).'},
+{k:['magnetotermico','termico','pia','automatico','sobrecarga'],title:'🛡 Magnetotérmico (PIA)',b:'Protege de sobrecargas y cortocircuitos. Curva <b>C</b> doméstica, <b>D</b> motores. Se elige entre la corriente de servicio y el límite del cable. Poder de corte 4,5-10 kA.'},
+{k:['diferencial','fuga','30ma','salvavidas'],title:'🧯 Diferencial',b:'Protege personas: <b>30 mA</b> en vivienda, 300 mA industrial. TEST mensual. Si salta, desconecta cargas una a una para localizar la fuga.'},
+{k:['tierra','puesta a tierra','pica','electrodo'],title:'🌍 Puesta a tierra',b:'Pica de 2 m + conductor de enlace. Resistencia objetivo <b>&lt;37 Ω</b>. Conductor verde/amarillo sin corriente en servicio. Revisión anual.'},
+{k:['placa','panel','solar','fotovoltaica','autoconsumo','inversor'],title:'☀️ Solar fotovoltaica',b:'Panel 450-550 Wp ≈ 2 kWh/día. Regla: <b>1 kWp ≈ 4 kWh/día</b>. Sur, 25-35°. Excedentes compensables o batería. Respetar rango MPPT.'},
+{k:['bateria','litio','lifepo4','acumulador','soc','dod'],title:'🔋 Baterías',b:'Capacidad útil = consumo nocturno / DoD. LiFePO₄: 6.000 ciclos, DoD 80-90%. Respeta CCL/DCL; el BMS protege. AGM: solo 50% útil.'},
+{k:['led','luminaria','lumen','lux','iluminacion'],title:'💡 Iluminación LED',b:'Eficacia &gt;100 lm/W (vial 130-150). Cálida 2.700-3.000 K, oficinas 4.000 K. Nº luminarias = (lux × m²)/(lúmenes × factor).'},
+{k:['reactiva','condensador','penalizacion'],title:'🔄 Energía reactiva',b:'Penaliza si cosφ &lt; 0,95. Se compensa con batería de condensadores (por etapas en industria). Se mide en kVArh.'},
+{k:['aerotermia','bomba de calor','calefaccion','suelo radiante'],title:'♨️ Aerotermia',b:'COP 3-5: 1 kW eléctrico → 3-5 kW térmicos. Ideal suelo radiante/fan-coils. Circuito dedicado con PIA + diferencial propios.'},
+{k:['coche electrico','vehiculo electrico','cargador','recarga','wallbox'],title:'🚗 Recarga VE',b:'Schuko 3,7 kW ocasional · Wallbox 7,4 kW mono estándar · 11-22 kW tri. Línea dedicada, diferencial tipo A/B, PIA curva C, ITC-BT-52.'},
+{k:['rebt','reglamento','itc','normativa','boletin'],title:'📜 Normativa REBT',b:'RD 842/2002. ITC-BT-25 circuitos vivienda (C1-C6), ITC-BT-52 recarga VE, ITC-BT-04 boletín (CIE). Legalización en altas/aumentos de potencia.'},
+{k:['averia','dispara','salta','corte','diagnostico'],title:'🔧 Diagnóstico de averías',b:'Diferencial → fuga a tierra. Magnetotérmico → sobrecarga/corto. Sin luz parcial → medir tensión en PIA. Parpadeos → empalmes/neutro. Cortar y verificar ausencia de tensión.'},
+{k:['contador','telemedida','lectura','icp','maximetro'],title:'📟 Contador y potencia',b:'Curva de carga cada 15 min. Si el ICP salta spesso → subir potencia. Punta/llano/valle (valle 00-08 h). Lectura real por telemedida.'},
+{k:['proteccion','selectividad','fusible','sobretension','spd'],title:'🧩 Selectividad y SPD',b:'Debe disparar solo la protección más cercana (coordinar I y t). SPD tipo 1+2 en cabecera contra rayos/maniobras. Fusibles: corte rápido en CT y DC.'}
 ];
 var eLog=[];
 function ePush(who,html){eLog.push({who:who,html:html});renderEChat()}
@@ -2281,94 +2192,3 @@ var score=0;
 e.k.forEach(function(key){if(t.indexOf(key)>=0)score+=key.length});
 if(score>bestScore){bestScore=score;best=e}
 });
-if(best&&bestScore>0){
-return '<b>'+best.title+'</b><br><br>'+best.b+
-'<br><i>Puedo hacerte cálculos: "cable para 20 A", "consumo de 1500 W 4 horas", "placas para 6 kWh/día"…</i>';
-}
-return 'Soy experta en electricidad ⚡. Todavía no tengo esa respuesta exacta, pero domino estos temas (púlsalos o pregúntalos):<br><br>'+
-EKB.map(function(e){return '· '+e.title.replace(/^[^ ]+ /,'')}).join('<br>')+
-'<br><br>También calculo al instante: secciones de cable, Ohm, consumo y dimensionado solar.';
-}
-function eSend(){
-var x=$('#eIn').value.trim();if(!x)return;
-$('#eIn').value='';electraRespond(x);
-}
-$('#eSend').onclick=eSend;
-$('#eIn').addEventListener('keydown',function(e){if(e.key==='Enter')eSend()});
-var wCurrent=null,wOrdF='activas',calcTab='ohm';
-function wnav(v){
-var map={worders:'v-worders',word:'v-word',wia:'v-wia',wcalc:'v-wcalc',wmsgs:'v-wmsgs',wperfil:'v-wperfil'};
-if(!map[v])v='worders';
-$$('#shellWorker .view').forEach(function(s){s.classList.toggle('on',s.id===map[v])});
-$$('#wtabbar .tab').forEach(function(t){t.classList.toggle('on',t.dataset.wnav===v)});
-var titles={worders:'Mis órdenes',word:'Detalle de orden',wia:'Electra IA',wcalc:'Calculadora',wmsgs:'Mensajes',wperfil:'Mi perfil'};
-$('#wtbTitle').textContent=titles[v];
-$('#wtbSub').textContent=new Date().toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'short'});
-try{
-if(v==='worders')renderWOrders();
-if(v==='word')renderWOrder();
-if(v==='wia')renderWiaView();
-if(v==='wcalc')renderWCalc();
-if(v==='wmsgs')renderWMsgs();
-if(v==='wperfil')renderWProfile();
-}catch(err){toast('Error al cargar la vista: '+err.message,'alert')}
-$('#wmain').scrollTop=0;$('#wmain').scrollLeft=0;vib(9);
-}
-function renderWOrders(){
-var t=myTech();
-var h=new Date().getHours();
-$('#wHello').innerHTML=(h<6?'Buenas noches':h<13?'Buenos días':h<21?'Buenas tardes':'Buenas noches')+', <span class="gold-text">'+esc((myUser()||{}).name||'')+'</span>';
-$('#wDate').textContent=new Date().toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});
-$('#wName').textContent=(myUser()||{}).name||'';
-var os=t?DB.orders.filter(function(o){return o.tech===t.id}):[];
-var k=[
-{k:'Hoy',v:nf(os.filter(function(o){return o.date===today()&&o.status!=='finalizada'}).length,0),i:'clock',st:''},
-{k:'En curso',v:nf(os.filter(function(o){return o.status==='encurso'}).length,0),i:'play',st:'color:var(--cyan)'},
-{k:'Pendientes',v:nf(os.filter(function(o){return o.status==='asignada'||o.status==='pendiente'}).length,0),i:'order',st:'color:var(--amber)'},
-{k:'Terminadas',v:nf(os.filter(function(o){return o.status==='finalizada'}).length,0),i:'check',st:'color:var(--green)'}];
-$('#wKpis').innerHTML=k.map(function(x){return '<div class="kpi"><div class="ic">'+svg(x.i)+'</div><div class="k">'+x.k+'</div><div class="v" style="'+x.st+'">'+x.v+'</div></div>'}).join('');
-var d=os.filter(function(o){
-if(wOrdF==='hoy')return o.date===today()&&o.status!=='finalizada';
-if(wOrdF==='prox')return o.date>today();
-if(wOrdF==='activas')return o.status!=='finalizada';
-if(wOrdF==='hechas')return o.status==='finalizada';
-return true});
-d.sort(function(a,b){return (a.date+a.hour)<(b.date+b.hour)?-1:1});
-$('#wOrderList').innerHTML=d.length?d.map(function(o){
-var c=cli(o.cli);
-var isToday=o.date===today();
-return '<div class="wcard p-'+o.prio+'" data-worder="'+o.id+'">'+
-'<div class="wc-top"><span class="wc-id">'+o.id+'</span>'+
-(isToday&&o.status!=='finalizada'?'<span class="chip gold">HOY</span>':'')+
-'<span class="chip '+statusChip(o.status)+'">'+o.status+'</span>'+
-'<span class="chip '+prioChip(o.prio)+'" style="margin-left:auto">'+(o.prio==='alta'?'urgente':o.prio)+'</span></div>'+
-'<div class="wc-t" style="text-transform:capitalize">'+o.type+' · '+esc(c.name)+'</div>'+
-'<div class="wc-d">'+esc(o.desc.length>95?o.desc.slice(0,93)+'…':o.desc)+'</div>'+
-'<div class="wc-s">'+svg('pin')+esc(o.addr)+'</div>'+
-'<div class="wc-s">'+svg('clock')+fdate(o.date)+' · '+o.hour+(o.mats&&o.mats.length?' · '+o.mats.length+' materiales':'')+'</div>'+
-'<div class="wc-f"><span class="chip gold" style="font-size:9px">Toca para abrir</span>'+
-'<span style="margin-left:auto;color:var(--gold2);font-size:16px">›</span></div></div>'}).join('')
-:'<div class="card"><div class="empty">'+svg('check')+'<div>No tienes órdenes en esta vista.<br>¡Buen trabajo!</div></div></div>';
-}
-$('#wOrdFilter').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
-$$('#wOrdFilter button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');wOrdF=b.dataset.f;renderWOrders()});
-function openWOrder(id){wCurrent=id;wnav('word')}
-function renderWOrder(){
-var o=DB.orders.find(function(x){return x.id===wCurrent});
-if(!o){wnav('worders');return}
-var c=cli(o.cli);
-var html='<div style="margin-bottom:13px"><button class="btn ghost sm" data-wnav="worders">← Volver a mis órdenes</button></div>';
-html+='<div class="card" style="margin-bottom:13px">'+
-'<div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:11px">'+
-'<span class="chip mono">'+o.id+'</span><span class="chip '+statusChip(o.status)+'">'+o.status+'</span>'+
-'<span class="chip '+prioChip(o.prio)+'">prioridad '+o.prio+'</span>'+
-'<span class="chip" style="text-transform:capitalize">'+o.type+'</span></div>'+
-'<h1 class="serif" style="font-size:21px;line-height:1.25">'+esc(c.name)+'</h1>'+
-'<p class="muted" style="font-size:12px;margin-top:5px">'+fdate(o.date)+' a las '+o.hour+'</p>'+
-'<div class="divider"></div>'+
-'<p class="eyebrow" style="margin-bottom:7px">Qué hay que hacer</p>'+
-'<p style="font-size:13px;line-height:1.7;color:var(--txt2)">'+esc(o.desc)+'</p>'+
-'<div class="divider"></div>'+
-'<div class="hr-list"><span class="k">Dirección</span><span style="font-size:12px">'+esc(o.addr)+'</span></div>'+
-'<div class="hr-list"><span class="k">Contacto</span><span style="font-size:12px">'+esc(c.contact)+' · '+esc(c.phone)+'</span></div>'+
-((o.mats&&o.mats.length)?'<div class="hr-list"><span class="k">Materiales</span
