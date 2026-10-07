@@ -1,35 +1,22 @@
-
-                        <!DOCTYPE html>
-                        <html lang="en">
-                        <head>
-                            <meta charset="UTF-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <style>
-                body {
-                  background-color: white; /* Ensure the iframe has a white background */
-                }
-
-                
-              </style>
-                        </head>
-                        <body>
-                            <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" data-theme="obsidian">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-<title>Volterra Energía · Edición Prestige v11</title>
+<title>Volterra Energía · Edición Prestige v11.1</title>
 <meta name="theme-color" content="#05070E">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Volterra">
 <meta name="description" content="Plataforma corporativa de gestión eléctrica: mercado, red SCADA, facturación, órdenes, equipo y campo.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.6 1.6L5.2 13.1h5.1L9.1 22.4l8.7-11.9h-5.3z' fill='%23E4C27C'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" id="appleIcon" href="data:image/png;base64,iVBORw0KGgo=">
 <style>
-html{background:#05070E}
+html{background:#05070E;overflow:hidden;width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html[data-theme="aurora"]{background:#F3EEE4}
+html,body{overscroll-behavior:none;width:100%}
 #splash{position:fixed;inset:0;z-index:500;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(180deg,#05070E,#0A0F1C);transition:opacity .45s ease,visibility .45s}
 html[data-theme="aurora"] #splash{background:linear-gradient(180deg,#F7F4ED,#EDE9E0)}
 #splash.hide{opacity:0;visibility:hidden;pointer-events:none}
@@ -71,7 +58,7 @@ html[data-theme="aurora"]{--bg:#EDE9E0;--bg2:#F7F4ED;--bg3:#FFFFFF;--surface:rgb
 --shL:0 26px 60px -28px rgba(40,44,60,.4);--shM:0 12px 28px -14px rgba(40,44,60,.3)}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{height:100%}
-body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--txt);overflow:hidden;-webkit-font-smoothing:antialiased}
+body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--txt);overflow:hidden;-webkit-font-smoothing:antialiased;overscroll-behavior:none}
 button,input,select,textarea{font-family:inherit;color:inherit}
 .mono{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
 .serif{font-family:'Playfair Display',Georgia,serif}
@@ -82,7 +69,7 @@ button,input,select,textarea{font-family:inherit;color:inherit}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 ::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-thumb{background:var(--stroke2);border-radius:9px}
 #errbar{display:none;position:fixed;top:0;left:0;right:0;z-index:999;background:#B3261E;color:#fff;font-size:12px;font-weight:700;padding:10px 16px;text-align:center}
-.auth{position:fixed;inset:0;z-index:300;display:grid;place-items:center;padding:22px;overflow:auto;
+.auth{position:fixed;inset:0;z-index:300;display:grid;place-items:center;padding:22px;overflow:auto;overscroll-behavior:contain;
 background:radial-gradient(900px 620px at 12% -8%,rgba(201,162,39,.22),transparent 60%),radial-gradient(800px 600px at 108% 108%,rgba(91,227,255,.14),transparent 60%),linear-gradient(160deg,#05070E,#0A0F1C 55%,#04060D);transition:opacity .6s var(--ease),visibility .6s}
 .auth.off{opacity:0;visibility:hidden;pointer-events:none}
 .auth::before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
@@ -145,7 +132,7 @@ border:1px solid rgba(201,162,39,.5);box-shadow:0 0 50px -8px rgba(201,162,39,.7
 .boot-bar{width:160px;height:2px;border-radius:99px;background:rgba(255,255,255,.1);margin:24px auto 0;overflow:hidden}
 .boot-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#FBF0D2,#C9A227);animation:bload 1.2s var(--ease) forwards}
 @keyframes bload{to{width:100%}}
-.shell{position:fixed;inset:0;display:flex;overflow:hidden;
+.shell{position:fixed;inset:0;display:flex;overflow:hidden;max-width:100%;
 background:radial-gradient(1000px 620px at 100% -10%,rgba(201,162,39,.10),transparent 60%),radial-gradient(800px 520px at -10% 110%,rgba(91,227,255,.08),transparent 60%),linear-gradient(180deg,var(--bg2),var(--bg))}
 .shell::before,.shell::after{content:"";position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
 .shell::before{width:44vw;height:44vw;left:-10vw;top:-12vw;background:radial-gradient(circle,rgba(201,162,39,.16),transparent 65%);animation:float1 22s ease-in-out infinite alternate}
@@ -173,7 +160,7 @@ html[data-theme="aurora"] .shell::after{background:radial-gradient(circle,rgba(1
 .sb-av{width:34px;height:34px;border-radius:11px;padding:1.5px;background:var(--goldGrad);flex:0 0 auto}
 .sb-av div{width:100%;height:100%;border-radius:9.5px;background:linear-gradient(150deg,#101725,#05080F);display:grid;place-items:center;font-family:'Playfair Display',serif;font-size:12px;color:var(--gold2)}
 .sb-user b{font-size:11.5px;display:block}.sb-user span{font-size:9px;color:var(--muted)}
-.col{flex:1;min-width:0;display:flex;flex-direction:column;position:relative}
+.col{flex:1;min-width:0;max-width:100%;display:flex;flex-direction:column;position:relative}
 .topbar{flex:0 0 auto;display:flex;align-items:center;gap:11px;padding:12px 16px;border-bottom:1px solid var(--stroke);
 background:linear-gradient(180deg,rgba(8,13,24,.86),rgba(8,13,24,.42));backdrop-filter:blur(18px);z-index:30;padding-top:calc(12px + env(safe-area-inset-top))}
 html[data-theme="aurora"] .topbar{background:linear-gradient(180deg,rgba(247,244,237,.92),rgba(247,244,237,.5))}
@@ -187,18 +174,19 @@ html[data-theme="aurora"] .topbar{background:linear-gradient(180deg,rgba(247,244
 .ibtn.exit{color:var(--red);border-color:rgba(255,110,126,.3)}
 .ibtn .dot{position:absolute;top:7px;right:8px;width:8px;height:8px;border-radius:50%;background:var(--gold3);box-shadow:0 0 0 2px var(--bg2)}
 .live-chip{display:flex;align-items:center;gap:7px;font-size:10px;font-weight:800;letter-spacing:.6px;padding:6px 11px;border-radius:99px;border:1px solid rgba(75,227,161,.32);background:rgba(75,227,161,.09);color:var(--green);max-width:170px;white-space:nowrap;overflow:hidden}
+@media(max-width:420px){.live-chip{display:none}}
 .live-chip i{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 1.6s infinite;flex:0 0 auto}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-main{flex:1;overflow-y:auto;overflow-x:hidden;padding:16px 16px calc(var(--tbh) + 32px);scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
+main{flex:1;overflow-y:auto;overflow-x:hidden;padding:16px 16px calc(var(--tbh) + 32px);scroll-behavior:smooth;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;max-width:100%}
 @media(min-width:768px){main{padding:22px 26px 40px}}
-.view{display:none;max-width:1240px;margin:0 auto;animation:vIn .45s var(--ease) both}
+.view{display:none;max-width:1240px;width:100%;margin:0 auto;animation:vIn .45s var(--ease) both}
 .view.on{display:block}
 @keyframes vIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 .vhead{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
 .vhead h1{font-family:'Playfair Display',serif;font-size:25px;font-weight:600;line-height:1.15}
 .vhead p{font-size:11px;color:var(--muted);margin-top:5px}
 .vhead .acts{display:flex;gap:8px;flex-wrap:wrap}
-.card{position:relative;border-radius:22px;padding:17px;background:linear-gradient(158deg,var(--surface2),var(--surface) 60%,rgba(255,255,255,.02));border:1px solid var(--stroke);box-shadow:var(--shM);overflow:hidden}
+.card{position:relative;border-radius:22px;padding:17px;background:linear-gradient(158deg,var(--surface2),var(--surface) 60%,rgba(255,255,255,.02));border:1px solid var(--stroke);box-shadow:var(--shM);overflow:hidden;max-width:100%}
 .card::after{content:"";position:absolute;left:8%;right:8%;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);pointer-events:none}
 html[data-theme="aurora"] .card::after{background:linear-gradient(90deg,transparent,rgba(255,255,255,.95),transparent)}
 .card.gold{border-color:rgba(201,162,39,.32);background:linear-gradient(158deg,rgba(201,162,39,.15),rgba(201,162,39,.03) 55%,rgba(255,255,255,.02));animation:goldpulse 5s ease-in-out infinite}
@@ -296,7 +284,7 @@ html[data-theme="aurora"] .chip.gold{color:var(--gold3)}
 .wcard .wc-s{font-size:10.5px;color:var(--muted);display:flex;align-items:center;gap:6px;margin-top:4px}
 .wcard .wc-s svg{width:12px;height:12px;stroke:var(--muted);fill:none;stroke-width:1.8;flex:0 0 auto}
 .wcard .wc-f{display:flex;align-items:center;gap:8px;margin-top:10px;padding-top:9px;border-top:1px solid var(--stroke)}
-.bubbles{display:flex;flex-direction:column;gap:9px;overflow-y:auto;padding:4px 2px}
+.bubbles{display:flex;flex-direction:column;gap:9px;overflow-y:auto;overscroll-behavior:contain;padding:4px 2px}
 .bub{max-width:86%;padding:11px 14px;border-radius:18px;font-size:12.8px;line-height:1.6;animation:vIn .4s var(--ease) both}
 .bub.me{align-self:flex-end;background:var(--goldGrad);color:#1A1408;font-weight:600;border-bottom-right-radius:7px;box-shadow:0 10px 24px -12px rgba(201,162,39,.7)}
 .bub.ot{align-self:flex-start;background:var(--surface2);border:1px solid var(--stroke);border-bottom-left-radius:7px}
@@ -357,7 +345,7 @@ html[data-theme="aurora"] .sheet{background:linear-gradient(180deg,#FFFDFA,#F2EE
 .shead{padding:13px 22px 6px;display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex:0 0 auto}
 .shead h2{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;line-height:1.25}
 .shead p{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.5}
-.sbody{padding:8px 22px 26px;overflow-y:auto;flex:1;-webkit-overflow-scrolling:touch}
+.sbody{padding:8px 22px 26px;overflow-y:auto;overscroll-behavior:contain;flex:1;-webkit-overflow-scrolling:touch}
 .xbtn{width:34px;height:34px;border-radius:12px;border:1px solid var(--stroke);background:var(--surface);display:grid;place-items:center;cursor:pointer;color:var(--txt);flex:0 0 auto}
 .xbtn svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round}
 .modal{position:fixed;inset:0;z-index:130;display:grid;place-items:center;padding:24px;opacity:0;pointer-events:none;transition:.35s;background:rgba(2,4,10,.8);backdrop-filter:blur(10px)}
@@ -613,7 +601,7 @@ html[data-theme="aurora"] .toast{background:rgba(255,255,255,.97);border-color:r
             <button class="btn danger" data-act="reset-db">Restablecer demo</button></div></div>
         </div>
         <div class="card" style="text-align:center"><p class="eyebrow">Grupo Volterra Energía</p>
-          <p class="muted" style="font-size:10.5px;margin-top:8px;letter-spacing:1px;line-height:1.8">VERSIÓN 11.0 · EDICIÓN PRESTIGE · PWA<br>iPad / iPhone / Android / PC<br>© 2026 Grupo Volterra</p></div>
+          <p class="muted" style="font-size:10.5px;margin-top:8px;letter-spacing:1px;line-height:1.8">VERSIÓN 11.1 · EDICIÓN PRESTIGE · PWA<br>iPad / iPhone / Android / PC<br>© 2026 Grupo Volterra</p></div>
       </section>
       <section class="view" id="v-menu">
         <div class="vhead"><div><h1>Módulos</h1><p>Todas las áreas de la plataforma</p></div></div>
@@ -717,6 +705,13 @@ function hideSplash(){
   if(!s)return;
   s.classList.add('hide');
   setTimeout(function(){if(s&&s.parentNode)s.parentNode.removeChild(s)},650);
+}
+function resetScroll(){
+  try{window.scrollTo(0,0)}catch(e){}
+  try{document.documentElement.scrollLeft=0;document.body.scrollLeft=0}catch(e){}
+  var m=document.getElementById('main');if(m)m.scrollLeft=0;
+  var w=document.getElementById('wmain');if(w)w.scrollLeft=0;
+  var a=document.querySelector('.auth');if(a)a.scrollLeft=0;
 }
 var $=function(s,c){return (c||document).querySelector(s)};
 var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
@@ -960,7 +955,7 @@ function nav(v){
   var m=MODULES.find(function(x){return x.v===v})||{n:'Módulos',s:''};
   $('#tbTitle').textContent=m.n;$('#tbSub').textContent=m.s;
   try{RENDER[v]()}catch(err){toast('No se pudo cargar el módulo: '+err.message,'alert')}
-  $('#main').scrollTop=0;vib(9);
+  $('#main').scrollTop=0;$('#main').scrollLeft=0;vib(9);
 }
 function bars(el,labels,vals){
   var W=560,H=170,base=H-22,mx=Math.max.apply(null,vals.concat([1]))*1.15,bw=(W-10)/vals.length;
@@ -1338,7 +1333,7 @@ function invoicePdf(inv){
   p.r(40,150,515,52,'0.95 0.96 0.94');
   p.t(56,182,'Energia 100% renovable con Garantias de Origen CNMC.','/F1',9,'0.15 0.3 0.25');
   p.t(56,166,'Factura electronica con sello de tiempo · '+co.name,'/F1',8,'0.35 0.4 0.45');
-  p.t(40,128,'Volterra Gestion v11 · '+new Date().toLocaleString('es-ES'),'/F1',7.5,'0.55 0.6 0.68');
+  p.t(40,128,'Volterra Gestion v11.1 · '+new Date().toLocaleString('es-ES'),'/F1',7.5,'0.55 0.6 0.68');
   return new Blob([buildPdf([p.o])],{type:'application/pdf'});
 }
 function reportPdf(mode){
@@ -1379,7 +1374,7 @@ function reportPdf(mode){
   rows.forEach(function(r,i){
     if(i%2===0)p.r(40,y-5,515,17,'0.965 0.965 0.975');
     p.t(50,y,r[0],'/F1',9.5,'0.16 0.18 0.24');p.t(440,y,r[1],'/F2',9.5,'0.1 0.12 0.18');y-=18});
-  p.t(40,80,'Informe generado por Vera IA · Volterra Gestion v11','/F1',7.5,'0.55 0.6 0.68');
+  p.t(40,80,'Informe generado por Vera IA · Volterra Gestion v11.1','/F1',7.5,'0.55 0.6 0.68');
   return new Blob([buildPdf([p.o])],{type:'application/pdf'});
 }
 var statusChip=function(s){return{pendiente:'red',asignada:'amber',encurso:'cyan',finalizada:'green'}[s]||''};
@@ -2158,7 +2153,7 @@ function wnav(v){
     if(v==='wmsgs')renderWMsgs();
     if(v==='wperfil')renderWProfile();
   }catch(err){toast('Error al cargar la vista: '+err.message,'alert')}
-  $('#wmain').scrollTop=0;vib(9);
+  $('#wmain').scrollTop=0;$('#wmain').scrollLeft=0;vib(9);
 }
 function renderWOrders(){
   var t=myTech();
@@ -2439,7 +2434,7 @@ function renderWProfile(){
     '<p class="eyebrow">Sesión</p>'+
     '<p class="muted" style="font-size:11.5px;margin-top:8px">Vuelve al inicio de sesión para entrar como Administrador u otro Trabajador.</p>'+
     '<button class="btn gold full xl" style="margin-top:12px" id="wLogoutBig">'+svg('out')+'Cambiar de usuario</button>'+
-    '<p class="muted" style="font-size:10px;margin-top:11px;letter-spacing:1px">VOLTERRA v11 · MODO TRABAJADOR</p></div>';
+    '<p class="muted" style="font-size:10px;margin-top:11px;letter-spacing:1px">VOLTERRA v11.1 · MODO TRABAJADOR</p></div>';
   $('#npSave').onclick=function(){
     var a=$('#np1').value,b=$('#np2').value;
     if(!a){toast('Escribe la nueva contraseña','alert');return}
@@ -2517,6 +2512,7 @@ function doLogout(){
   $('#auth').classList.remove('off');
   $('#loginPass').value='';$('#authErr').classList.remove('on');
   $('#loginBtnTxt').textContent='Iniciar sesión';$('#loginBtn').disabled=false;loginBusy=false;
+  resetScroll();
   toast('Sesión cerrada · introduce usuario y contraseña','ok');
 }
 $('#sbOut').onclick=doLogout;
@@ -2555,7 +2551,8 @@ function enterApp(){
       wnav('worders');
     }
     refreshBadges();
-    setTimeout(function(){$('#boot').classList.remove('on')},1200);
+    resetScroll();
+    setTimeout(function(){$('#boot').classList.remove('on');resetScroll()},1200);
     setTimeout(function(){
       toast(u.role==='admin'?'Bienvenido, Administrador · Vera IA lista':'Hola '+esc(u.name)+' · Electra IA lista','ok');
       if(u.role==='worker'){var uw=unreadWorker();if(uw)setTimeout(function(){toast('Tienes '+uw+' mensajes del administrador','mail')},1400)}
@@ -2647,16 +2644,18 @@ buildSidebar();applyTheme();renderMenu();setRole('admin');
 (function boot(){
   try{localStorage.removeItem('volterra-session')}catch(e){}
   var r=null;try{r=JSON.parse(localStorage.getItem('volterra-remember'))}catch(e){}
-  if(r&&r.u){
-    setRole(r.role==='worker'?'worker':'admin');
-    $('#loginUser').value=r.u;
-    try{$('#loginPass').focus()}catch(e){}
-  }else{
-    try{$('#loginUser').focus()}catch(e){}
-  }
-  hideSplash();
+  if(r&&r.u){setRole(r.role==='worker'?'worker':'admin');$('#loginUser').value=r.u;}
+  resetScroll();
+  var fr=(document.fonts&&document.fonts.ready)?document.fonts.ready:Promise.resolve();
+  var cap=new Promise(function(res){setTimeout(res,1600)});
+  Promise.race([fr,cap]).then(function(){
+    requestAnimationFrame(function(){hideSplash();resetScroll()});
+  });
 })();
-window.addEventListener('load',hideSplash);
+window.addEventListener('load',function(){hideSplash();resetScroll()});
+window.addEventListener('pageshow',resetScroll);
+window.addEventListener('resize',resetScroll);
+window.addEventListener('orientationchange',function(){setTimeout(resetScroll,150)});
 window.addEventListener('keydown',function(e){if(e.key==='Escape'){closeSheet();$('#modal').classList.remove('on')}});
 if('serviceWorker' in navigator){
   window.addEventListener('load',function(){
@@ -2666,38 +2665,3 @@ if('serviceWorker' in navigator){
 </script>
 </body>
 </html>
-
-
-              <script>
-                              const CACHE='volterra-v11';
-self.addEventListener('install',e=>{
-  e.waitUntil(caches.open(CACHE).then(c=>c.addAll(['./','./index.html'])).then(()=>self.skipWaiting()));
-});
-self.addEventListener('activate',e=>{
-  e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(n=>n!==CACHE).map(n=>caches.delete(n)))).then(()=>self.clients.claim()));
-});
-self.addEventListener('fetch',e=>{
-  const r=e.request;
-  if(r.method!=='GET')return;
-  if(r.mode==='navigate'){
-    e.respondWith(fetch(r).then(res=>{
-      const cp=res.clone();caches.open(CACHE).then(c=>c.put('./index.html',cp));return res;
-    }).catch(()=>caches.match('./index.html')));
-    return;
-  }
-  e.respondWith(caches.match(r).then(h=>{
-    if(h)return h;
-    return fetch(r).then(res=>{
-      if(res&&(res.status===200||res.type==='opaque')){
-        const cp=res.clone();caches.open(CACHE).then(c=>c.put(r,cp));
-      }
-      return res;
-    }).catch(()=>h);
-  }));
-});
-
-
-              </script>
-                        </body>
-                        </html>
-                    
